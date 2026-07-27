@@ -1,106 +1,267 @@
 import "./App.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
+
   return (
     <>
-      <header className="navbar">
-        <h2 className="logo">IB STUDIO</h2>
+      <header className="header">
+        <div className="logo">
+  <span>IB</span> STUDIO
+</div>
 
         <nav>
           <a href="#accueil">Accueil</a>
           <a href="#services">Services</a>
           <a href="#realisations">Réalisations</a>
+          <a href="#apropos">À propos</a>
           <a href="#contact">Contact</a>
         </nav>
       </header>
 
       <main>
-        <section className="hero" id="accueil">
-          <p className="hero-label">STUDIO CRÉATIF DIGITAL</p>
+        <section
+          id="accueil"
+          className="hero"
+          data-aos="fade-up"
+        >
+          <div className="hero-text">
+            <p className="subtitle">STUDIO CRÉATIF DIGITAL</p>
 
-          <h1>Nous créons des sites web modernes.</h1>
+            <h1>
+              Nous créons des sites web qui développent votre activité.
+            </h1>
 
-          <p className="hero-text">
-            IB STUDIO imagine des expériences numériques élégantes,
-            rapides et adaptées à tous les écrans.
-          </p>
+            <p>
+              IB STUDIO accompagne les artistes, les labels, les DJ et les
+              créateurs dans la création de sites web premium et
+              d'identités digitales élégantes.
+            </p>
 
-          <a className="hero-button" href="#services">
-            Découvrir nos services
-          </a>
+            <div className="buttons">
+              <a href="#services" className="btn">
+                Découvrir nos services
+              </a>
+
+              <a href="#contact" className="btn btn-outline">
+                Nous contacter
+              </a>
+            </div>
+          </div>
+
+          <div className="hero-image">
+            <img
+              src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80"
+              alt="Composants électroniques et technologie"
+            />
+          </div>
         </section>
 
-        <section className="services" id="services">
-          <p className="section-label">NOS SERVICES</p>
-          <h2>Des solutions pour développer votre présence en ligne</h2>
+        <section
+          id="services"
+          className="services"
+          data-aos="zoom-in"
+        >
+        <p className="subtitle services-title">nos services</p>
+          <h2>
+            Des solutions complètes pour votre présence en ligne
+          </h2>
 
           <div className="cards">
             <article className="card">
               <span>01</span>
-              <h3>Site vitrine</h3>
+              <h3>Création de sites web</h3>
               <p>
-                Un site moderne et professionnel pour présenter votre activité.
+                Sites vitrines modernes, rapides et adaptés aux téléphones,
+                tablettes et ordinateurs.
               </p>
             </article>
 
             <article className="card">
               <span>02</span>
-              <h3>Portfolio</h3>
+              <h3>Boutiques en ligne</h3>
               <p>
-                Une présentation élégante de vos créations et de vos projets.
+                Des boutiques simples, élégantes et efficaces pour vendre vos
+                produits sur internet.
               </p>
             </article>
 
             <article className="card">
               <span>03</span>
-              <h3>Boutique en ligne</h3>
+              <h3>Applications web</h3>
               <p>
-                Une expérience claire et efficace pour vendre vos produits.
+                Des applications personnalisées pour répondre aux besoins de
+                votre activité.
+              </p>
+            </article>
+
+            <article className="card">
+              <span>04</span>
+              <h3>Conception UX/UI</h3>
+              <p>
+                Des interfaces claires, agréables et faciles à utiliser pour
+                vos visiteurs.
+              </p>
+            </article>
+
+            <article className="card">
+              <span>05</span>
+              <h3>SEO et performance</h3>
+              <p>
+                Optimisation de la vitesse et du référencement de votre site
+                sur les moteurs de recherche.
+              </p>
+            </article>
+
+            <article className="card">
+              <span>06</span>
+              <h3>Maintenance</h3>
+              <p>
+                Mise à jour, sécurité, correction des problèmes et assistance
+                technique.
               </p>
             </article>
           </div>
         </section>
 
-        <section className="projects" id="realisations">
-          <p className="section-label">NOS RÉALISATIONS</p>
-          <h2>Des projets simples, élégants et performants</h2>
+        <section
+          id="realisations"
+          className="projects"
+          data-aos="fade-up"
+        >
+          <p className="subtitle">NOS RÉALISATIONS</p>
+
+          <h2>
+            Des projets simples, élégants et performants
+          </h2>
 
           <div className="project-grid">
             <article className="project">
-              <div className="project-image">Projet 01</div>
-              <h3>Maison Élégance</h3>
-              <p>Site vitrine</p>
+              <div className="project-image project-one">
+                <span>Projet 01</span>
+              </div>
+
+              <h3>Site premium pour artiste</h3>
+<p>Étude de style — Projet conceptuel</p>
             </article>
 
             <article className="project">
-              <div className="project-image">Projet 02</div>
-              <h3>Atelier Créatif</h3>
-              <p>Portfolio</p>
+              <div className="project-image project-two">
+                <span>Projet 02</span>
+              </div>
+
+              <h3>Portfolio premium pour artiste</h3>
+<p>Étude de style — Projet conceptuel</p>
             </article>
 
             <article className="project">
-              <div className="project-image">Projet 03</div>
-              <h3>Concept Store</h3>
-              <p>Boutique en ligne</p>
+              <div className="project-image project-three">
+                <span>Projet 03</span>
+              </div>
+
+              <h3>Boutique en ligne premium</h3>
+<p>Étude de style — Projet conceptuel</p>
             </article>
           </div>
         </section>
 
-        <section className="contact" id="contact">
-          <p className="section-label">CONTACT</p>
-          <h2>Parlons de votre projet</h2>
+        <section
+          id="apropos"
+          className="about"
+          data-aos="fade-up"
+        >
+          <div>
+            <p className="subtitle">À PROPOS</p>
 
-          <form>
-            <input type="text" placeholder="Votre nom" />
-            <input type="email" placeholder="Votre adresse email" />
-            <textarea placeholder="Décrivez votre projet"></textarea>
-            <button type="submit">Envoyer le message</button>
+            <h2>
+              Nous créons des univers numériques qui marquent les esprits.
+            </h2>
+
+            <p>
+              IB STUDIO accompagne les artistes, les labels, les DJ et les
+              créateurs dans la création de sites web premium, d'identités
+              visuelles et d'univers numériques élégants.
+            </p>
+
+            <p>
+              Chaque projet est conçu avec élégance, stratégie et souci du
+              détail afin de renforcer l'image de chaque artiste et
+              créateur.
+            </p>
+          </div>
+        </section>
+
+        <section
+          id="contact"
+          className="contact"
+          data-aos="fade-up"
+        >
+          <div className="contact-text">
+            <p className="subtitle">CONTACT</p>
+
+            <h2>Parlons de votre projet</h2>
+
+            <p>
+              Vous avez besoin d'un site internet, d'un portfolio ou
+              d'une boutique en ligne ? Envoyez-nous votre demande.
+            </p>
+          </div>
+
+         <p className="contact-email">
+  E-mail :{" "}
+<a href="mailto:contact.ibstudioweb@gmail.com">
+  contact.ibstudioweb@gmail.com
+</a>
+</p>
+          <form
+  action="https://formsubmit.co/contact.ibstudioweb@gmail.com"
+  method="POST"
+>
+            <input
+              type="text"
+              name="nom"
+              placeholder="Votre nom"
+              required
+            />
+            <input
+  type="email"
+  name="email"
+  placeholder="Votre adresse e-mail"
+  required
+/>
+
+            <textarea
+            name="message"
+              placeholder="Décrivez votre projet"
+              rows="7"
+              required
+            />
+
+            <button
+              className="btn-primary"
+              type="submit"
+            >
+              Envoyer le message
+            </button>
           </form>
         </section>
       </main>
 
       <footer>
-        <p>© 2026 IB STUDIO — Tous droits réservés.</p>
+        <div className="logo">
+          <span>IB</span> STUDIO
+        </div>
+
+        <p>Créatif · Digital · Performance</p>
+        <p>© 2026 IB STUDIO. Tous droits réservés.</p>
       </footer>
     </>
   );
