@@ -221,22 +221,36 @@ function App() {
   contact.ibstudioweb@gmail.com
 </a>
 </p>
-          <form
+          <p className="contact-email">
+  E-mail :{" "}
+  <a href="mailto:contact.ibstudioweb@gmail.com">
+    contact.ibstudioweb@gmail.com
+  </a>
+</p>
+
+<form
   action="https://formsubmit.co/contact.ibstudioweb@gmail.com"
   method="POST"
 >
-            <input
-              type="text"
-              name="nom"
-              placeholder="Votre nom"
-              required
-            />
-            <input
-  type="email"
-  name="email"
-  placeholder="Votre adresse e-mail"
-  required
-/>
+  <input
+    type="hidden"
+    name="_next"
+    value="https://www.ibstudio-agency.com/merci.html"
+  />
+
+  <input
+    type="text"
+    name="nom"
+    placeholder="Votre nom"
+    required
+  />
+
+  <input
+    type="email"
+    name="email"
+    placeholder="Votre adresse e-mail"
+    required
+  />
 
             <textarea
             name="message"
