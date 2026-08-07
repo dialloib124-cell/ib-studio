@@ -221,12 +221,6 @@ function App() {
   contact.ibstudioweb@gmail.com
 </a>
 </p>
-          <p className="contact-email">
-  E-mail :{" "}
-  <a href="mailto:contact.ibstudioweb@gmail.com">
-    contact.ibstudioweb@gmail.com
-  </a>
-</p>
 
 <form
   action="https://formsubmit.co/contact.ibstudioweb@gmail.com"

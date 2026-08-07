@@ -568,7 +568,6 @@ nav a {
   background-repeat: no-repeat;
 }
 
-
 /* Centrer le troisième projet sur ordinateur */
 @media (min-width: 701px) {
   .project-grid .project:last-child {
