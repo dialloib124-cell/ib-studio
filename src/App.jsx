@@ -2,7 +2,6 @@ import "./App.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-
 function App() {
   useEffect(() => {
     AOS.init({
@@ -226,9 +225,8 @@ function App() {
                 <span>Projet 03</span>
               </div>
 
-              <h3>Boutique en ligne premium</h3>
-<p>Étude de style — Projet conceptuel</p>
-            </article>
+              <h3>Maison Noryelis — Boutique de bijoux premium<a href="https://maison-noryelis.dialloib124.chatgpt.site" target="_blank" rel="noopener noreferrer" style={{ display: "block", marginTop: "12px", color: "#f5b934", fontSize: "14px", textDecoration: "none" }}>Voir le site ↗</a></h3>
+<p>Projet conceptuel — Création IB Studio</p>            </article>
           </div>
         </section>
 <section
