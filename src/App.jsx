@@ -234,39 +234,18 @@ function App() {
   className="testimonials"
   data-aos="fade-up"
 >
-
   <p className="subtitle">TÉMOIGNAGES</p>
-  <h2>Ce qu'en disent nos clients</h2>
+  <h2>Les premiers témoignages arrivent bientôt.</h2>
 
-  <div className="testimonial-grid">
-    <article className="testimonial-card">
-      <p className="quote">
-        « IB STUDIO a su capturer mon univers à la perfection. Un site élégant, rapide et qui me ressemble vraiment. »
-      </p>
-      <div className="testimonial-author">
-        <h3>Maël Vasquez</h3>
-        <span>Rap</span>
-      </div>
-    </article>
+  <p style={{ maxWidth: "720px", margin: "20px auto", textAlign: "center" }}>
+    Vous avez un projet ? Collaborez avec IB Studio et devenez l’un de nos
+    premiers clients partenaires.
+  </p>
 
-    <article className="testimonial-card">
-      <p className="quote">
-        « Un travail soigné du début à la fin. Mon portfolio a transformé l'image que je renvoie à mon public. »
-      </p>
-      <div className="testimonial-author">
-        <h3>Léna Sow</h3>
-        <span>R&B</span>
-      </div>
-    </article>
-    <article className="testimonial-card">
-      <p className="quote">
-        « Professionnalisme, écoute et créativité. Ma boutique en ligne est à la fois belle et redoutablement efficace. »
-      </p>
-      <div className="testimonial-author">
-        <h3>Kofi Mensah</h3>
-        <span>Afro</span>
-      </div>
-    </article>
+  <div style={{ textAlign: "center", marginTop: "24px" }}>
+    <a href="#contact" className="btn">
+      Parler de votre projet
+    </a>
   </div>
 </section>
         <section
