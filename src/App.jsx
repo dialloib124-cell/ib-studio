@@ -20,11 +20,8 @@ function App() {
         <nav>
           <a href="#accueil">Accueil</a>
 <a href="#services">Services</a>
-<a href="#tarifs">Tarifs</a>
-<a href="#realisations">Réalisations</a>
-<a href="#temoignages">Témoignages</a>
 <a href="#apropos">À propos</a>
-<a href="#contact">Contact</a>
+<a href="#contact" className="btn">Prendre rendez-vous</a>
         </nav>
       </header>
 
@@ -38,32 +35,92 @@ function App() {
             <p className="subtitle">STUDIO CRÉATIF DIGITAL</p>
 
             <h1>
-              Nous créons des sites web qui développent votre activité.
-            </h1>
+  Transformez votre passion en une présence digitale qui attire des clients.
+</h1>
 
-            <p>
-              IB STUDIO accompagne les artistes, les labels, les DJ et les
-              créateurs dans la création de sites web premium et
-              d'identités digitales élégantes.
-            </p>
+<p>
+  IB Studio crée des sites web premium pour les artistes, les labels, les DJ
+  et les créateurs qui veulent développer leur activité et renforcer leur image.
+</p>
 
             <div className="buttons">
               <a href="#services" className="btn">
-                Découvrir nos services
+                Découvrir nos solutions
               </a>
 
               <a href="#contact" className="btn btn-outline">
-                Nous contacter
+                parler de mon projet
               </a>
             </div>
           </div>
 
           <div className="hero-image">
             <img
-              src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80"
-              alt="Composants électroniques et technologie"
-            />
+  src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=1200&q=85"
+  alt="Artiste en performance dans un univers musical"
+/>
+          </div></section>
+  <section
+          id="diagnostic"
+          className="diagnostic"
+          data-aos="fade-up"
+        >
+          <div>
+            <p className="subtitle">Votre mini-diagnostic digital gratuit</p>
+
+            <p>
+              Recevez gratuitement 3 recommandations personnalisées pour
+              améliorer votre présence en ligne avec la méthode COP-COL :
+              comprendre, créer.
+            </p>
           </div>
+
+          <form
+            action="https://formsubmit.co/contact.ibstudioweb@gmail.com"
+            method="POST"
+          >
+            <input type="hidden" name="_next" value="/merci.html" />
+
+            <input
+              type="text"
+              name="prenom"
+              placeholder="Prénom"
+            />
+
+            <input
+              type="email"
+              name="email"
+              placeholder="Votre adresse e-mail"
+              required
+            />
+            <select name="type_de_projet" defaultValue="vitrine">
+              <option value="vitrine">site vitrine</option>
+              <option value="boutique">boutique en ligne</option>
+              <option value="portfolio">portfolio</option>
+              <option value="application">application web</option>
+              <option value="autre">autre</option>
+            </select>
+
+            <textarea
+              name="description"
+              placeholder="Une courte description du projet"
+              rows={5}
+            />
+
+            <label className="checkbox-label" style={{ display: "flex", alignItems: "center", gap: "10px", marginTop: "12px" }}>
+              <input
+                type="checkbox"
+                name="consentement"
+                value="oui"
+                required
+              />
+              J’accepte d’être recontacté(e) par IB Studio au sujet de mon projet.
+            </label>
+
+            <button className="btn-primary" type="submit">
+              Recevoir mon diagnostic gratuit
+            </button>
+          </form>
         </section>
 
         <section
@@ -144,48 +201,47 @@ function App() {
   <div className="pricing-grid">
     <article className="pricing-card">
       <h3>STARTER</h3>
-      <p className="price">250€ - 350€</p>
+      <p className="price">À partir de 250€</p>
       <ul>
         <li>Site vitrine 1 page</li>
         <li>Design responsive</li>
         <li>Formulaire de contact</li>
         <li>Liens réseaux sociaux</li>
-        <li>Livraison 5-7 jours</li>
+        <li>Livraison 24-48 heures</li>
       </ul>
-      <a href="#contact" className="btn">
-        Demander un devis
+      <a href="https://buy.stripe.com/bJeaF0c6ebDadcSe3NdQQ00" className="btn">
+        Payer l’offre Starter — 250 €
       </a>
     </article>
-
     <article className="pricing-card pricing-featured">
       <span className="badge">Populaire</span>
       <h3>PRO</h3>
-      <p className="price">500€ - 700€</p>
+      <p className="price">À partir de 500€</p>
       <ul>
         <li>Site multi-sections</li>
         <li>Design personnalisé</li>
         <li>SEO de base</li>
         <li>Formulaire + réseaux sociaux</li>
-        <li>Livraison 10-14 jours</li>
+        <li>Livraison 48 heures à 1 semaine</li>
       </ul>
-      <a href="#contact" className="btn">
-        Demander un devis
+      <a href="https://buy.stripe.com/6oU3cyb2a36Egp4bVFdQQ01" className="btn">
+        Payer l’offre Pro — 500 €
       </a>
     </article>
 
     <article className="pricing-card">
       <h3>PREMIUM</h3>
-      <p className="price">900€ - 1200€</p>
+      <p className="price">À partir de 900€</p>
       <ul>
         <li>Tout le pack Pro</li>
         <li>Boutique en ligne</li>
         <li>Blog intégré</li>
         <li>SEO avancé</li>
         <li>1 mois de support inclus</li>
-        <li>Livraison 3-4 semaines</li>
+        <li>Livraison 1-2 semaines</li>
       </ul>
-      <a href="#contact" className="btn">
-        Demander un devis
+      <a href="https://buy.stripe.com/00w4gC1rA0Ywfl01h1dQQ02" className="btn">
+        Payer l’offre Premium — 900 €
       </a>
     </article>
   </div>
@@ -340,7 +396,7 @@ function App() {
 
       <footer>
         <div className="logo">
-          <span>IB</span> STUDIO
+          <span>IB⁹²</span> STUDIO
         </div>
 
         <p>Créatif · Digital · Performance</p>
