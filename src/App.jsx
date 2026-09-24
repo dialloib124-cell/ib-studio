@@ -60,68 +60,6 @@ function App() {
   alt="Artiste en performance dans un univers musical"
 />
           </div></section>
-  <section
-          id="diagnostic"
-          className="diagnostic"
-          data-aos="fade-up"
-        >
-          <div>
-            <p className="subtitle">Votre mini-diagnostic digital gratuit</p>
-
-            <p>
-              Recevez gratuitement 3 recommandations personnalisées pour
-              améliorer votre présence en ligne avec la méthode COP-COL :
-              comprendre, créer.
-            </p>
-          </div>
-
-          <form
-            action="https://formsubmit.co/contact.ibstudioweb@gmail.com"
-            method="POST"
-          >
-            <input type="hidden" name="_next" value="/merci.html" />
-
-            <input
-              type="text"
-              name="prenom"
-              placeholder="Prénom"
-            />
-
-            <input
-              type="email"
-              name="email"
-              placeholder="Votre adresse e-mail"
-              required
-            />
-            <select name="type_de_projet" defaultValue="vitrine">
-              <option value="vitrine">site vitrine</option>
-              <option value="boutique">boutique en ligne</option>
-              <option value="portfolio">portfolio</option>
-              <option value="application">application web</option>
-              <option value="autre">autre</option>
-            </select>
-
-            <textarea
-              name="description"
-              placeholder="Une courte description du projet"
-              rows={5}
-            />
-
-            <label className="checkbox-label" style={{ display: "flex", alignItems: "center", gap: "10px", marginTop: "12px" }}>
-              <input
-                type="checkbox"
-                name="consentement"
-                value="oui"
-                required
-              />
-              J’accepte d’être recontacté(e) par IB Studio au sujet de mon projet.
-            </label>
-
-            <button className="btn-primary" type="submit">
-              Recevoir mon diagnostic gratuit
-            </button>
-          </form>
-        </section>
 
         <section
           id="services"
@@ -189,6 +127,70 @@ function App() {
             </article>
           </div>
         </section>
+        <section
+          id="realisations"
+          className="projects"
+          data-aos="fade-up"
+        >
+          <p className="subtitle">NOS RÉALISATIONS</p>
+
+          <h2>
+            Des projets simples, élégants et performants
+          </h2>
+
+          <div className="project-grid">
+            <article className="project">
+              <div className="project-image project-one">
+                <span>Projet 01</span>
+              </div>
+
+              <h3>Site premium pour artiste</h3>
+<p>Étude de style — Projet conceptuel</p>
+            </article>
+
+            <article className="project">
+              <div className="project-image project-two">
+                <span>Projet 02</span>
+              </div>
+
+              <h3>Portfolio premium pour artiste</h3>
+<p>Étude de style — Projet conceptuel</p>
+            </article>
+
+            <article className="project">
+              <div className="project-image project-three">
+                <span>Projet 03</span>
+              </div>
+
+              <h3>Maison Noryelis — Boutique de bijoux premium<a href="https://maison-noryelis.dialloib124.chatgpt.site" target="_blank" rel="noopener noreferrer" style={{ display: "block", marginTop: "12px", color: "#f5b934", fontSize: "14px", textDecoration: "none" }}>Voir le site ↗</a></h3>
+<p>Projet conceptuel — Création IB Studio</p>            </article>
+          </div>
+        </section>
+        <section
+          id="apropos"
+          className="about"
+          data-aos="fade-up"
+        >
+          <div>
+            <p className="subtitle">À PROPOS</p>
+
+            <h2>
+              Nous créons des univers numériques qui marquent les esprits.
+            </h2>
+
+            <p>
+              IB STUDIO accompagne les artistes, les labels, les DJ et les
+              créateurs dans la création de sites web premium, d'identités
+              visuelles et d'univers numériques élégants.
+            </p>
+
+            <p>
+              Chaque projet est conçu avec élégance, stratégie et souci du
+              détail afin de renforcer l'image de chaque artiste et
+              créateur.
+            </p>
+          </div>
+        </section>
 <section
   id="tarifs"
   className="pricing"
@@ -243,94 +245,28 @@ function App() {
       <a href="https://buy.stripe.com/00w4gC1rA0Ywfl01h1dQQ02" className="btn">
         Payer l’offre Premium — 900 €
       </a>
-    </article>
-  </div>
+      </article>
+</div>
 </section>
-        <section
-          id="realisations"
-          className="projects"
-          data-aos="fade-up"
-        >
-          <p className="subtitle">NOS RÉALISATIONS</p>
+        <section className="newsletter-section">
+  <p className="subtitle">ACTUALITÉS</p>
+  <h2 className="newsletter-mobile-title">
+  Recevez les actualités IB Studio
+</h2>
+  <p className="newsletter-intro">
+  Découvrez nos nouveaux projets, des conseils pour renforcer votre image et des offres réservées aux abonnés.
+</p>
 
-          <h2>
-            Des projets simples, élégants et performants
-          </h2>
-
-          <div className="project-grid">
-            <article className="project">
-              <div className="project-image project-one">
-                <span>Projet 01</span>
-              </div>
-
-              <h3>Site premium pour artiste</h3>
-<p>Étude de style — Projet conceptuel</p>
-            </article>
-
-            <article className="project">
-              <div className="project-image project-two">
-                <span>Projet 02</span>
-              </div>
-
-              <h3>Portfolio premium pour artiste</h3>
-<p>Étude de style — Projet conceptuel</p>
-            </article>
-
-            <article className="project">
-              <div className="project-image project-three">
-                <span>Projet 03</span>
-              </div>
-
-              <h3>Maison Noryelis — Boutique de bijoux premium<a href="https://maison-noryelis.dialloib124.chatgpt.site" target="_blank" rel="noopener noreferrer" style={{ display: "block", marginTop: "12px", color: "#f5b934", fontSize: "14px", textDecoration: "none" }}>Voir le site ↗</a></h3>
-<p>Projet conceptuel — Création IB Studio</p>            </article>
-          </div>
-        </section>
-<section
-  id="temoignages"
-  className="testimonials"
-  data-aos="fade-up"
->
-  <p className="subtitle">TÉMOIGNAGES</p>
-  <h2>Les premiers témoignages arrivent bientôt.</h2>
-
-  <p style={{ maxWidth: "720px", margin: "20px auto", textAlign: "center" }}>
-    Vous avez un projet ? Collaborez avec IB Studio et devenez l’un de nos
-    premiers clients partenaires.
-  </p>
-
-  <div style={{ textAlign: "center", marginTop: "24px" }}>
-    <a href="#contact" className="btn">
-      Parler de votre projet
-    </a>
-  </div>
+  <iframe
+    src="https://15nsl.mjt.lu/wgt/15nsl/0y9u/form?c=40134689"
+    title="Inscription aux actualités IB Studio"
+    width="100%"
+    height="300"
+    scrolling="no"
+    style={{ border: "0" }}
+  />
 </section>
-        <section
-          id="apropos"
-          className="about"
-          data-aos="fade-up"
-        >
-          <div>
-            <p className="subtitle">À PROPOS</p>
-
-            <h2>
-              Nous créons des univers numériques qui marquent les esprits.
-            </h2>
-
-            <p>
-              IB STUDIO accompagne les artistes, les labels, les DJ et les
-              créateurs dans la création de sites web premium, d'identités
-              visuelles et d'univers numériques élégants.
-            </p>
-
-            <p>
-              Chaque projet est conçu avec élégance, stratégie et souci du
-              détail afin de renforcer l'image de chaque artiste et
-              créateur.
-            </p>
-          </div>
-        </section>
-
-        <section
+      <section
           id="contact"
           className="contact"
           data-aos="fade-up"
@@ -366,10 +302,18 @@ function App() {
   <input
     type="text"
     name="nom"
-    placeholder="Votre nom"
+    placeholder="Votre nom complet"
     required
   />
-
+<select name="metier" required>
+  <option value="">Choisissez votre métier</option>
+  <option value="Artiste">Artiste</option>
+  <option value="Rappeur">Rappeur</option>
+  <option value="DJ">DJ</option>
+  <option value="Entrepreneur">Entrepreneur</option>
+  <option value="Label">Label</option>
+  <option value="Autre">Autre</option>
+</select>
   <input
     type="email"
     name="email"
@@ -392,6 +336,15 @@ function App() {
             </button>
           </form>
         </section>
+        <a
+  href="https://wa.me/33650744061?text=Bonjour%20IB%20Studio%2C%20je%20souhaite%20discuter%20de%20mon%20projet."
+  className="whatsapp-float"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Contacter IB Studio sur WhatsApp"
+>
+  ☎
+</a>
       </main>
 
       <footer>

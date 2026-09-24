@@ -398,6 +398,55 @@ border-bottom: 1px solid rgba(255,255,255,0.08);
   resize: vertical;
 }
 
+/* Mobile: stack diagnostic form fields vertically and full width */
+@media (max-width: 600px) {
+  .diagnostic form {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .diagnostic form input[type="text"],
+  .diagnostic form input[type="email"],
+  .diagnostic form select,
+  .diagnostic form textarea,
+  .diagnostic form .btn-primary,
+  .diagnostic form .checkbox-label {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .diagnostic form input[type="text"],
+  .diagnostic form input[type="email"],
+  .diagnostic form select,
+  .diagnostic form textarea {
+    padding: 14px 12px;
+    margin-bottom: 12px;
+    background: #151515;
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 9px;
+    color: #fff;
+  }
+
+  .diagnostic form textarea {
+    min-height: 120px;
+  }
+
+  .diagnostic form .checkbox-label {
+    margin: 8px 0 14px;
+    padding: 6px 0;
+  }
+
+  .diagnostic form .btn-primary {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 9px;
+    font-weight: 700;
+  }
+}
+
 .contact button {
   grid-column: 1 / -1;
   justify-self: center;
@@ -755,4 +804,135 @@ nav a {
   .pricing-grid {
     grid-template-columns: 1fr;
   }
+}
+/* Images adaptées à chaque service */
+.cards .card {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.cards .card:nth-child(1) {
+  background-image:
+    linear-gradient(rgba(5, 5, 7, 0.58), rgba(5, 5, 7, 0.80)),
+    url("https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=1000&q=80");
+}
+
+.cards .card:nth-child(2) {
+  background-image:
+    linear-gradient(rgba(5, 5, 7, 0.58), rgba(5, 5, 7, 0.80)),
+    url("https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1000&q=80");
+}
+
+.cards .card:nth-child(3) {
+  background-image:
+    linear-gradient(rgba(5, 5, 7, 0.58), rgba(5, 5, 7, 0.80)),
+    url("https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80");
+}
+
+.cards .card:nth-child(4) {
+  background-image:
+    linear-gradient(rgba(5, 5, 7, 0.58), rgba(5, 5, 7, 0.80)),
+    url("https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=1000&q=80");
+}
+
+.cards .card:nth-child(5) {
+  background-image:
+    linear-gradient(rgba(5, 5, 7, 0.58), rgba(5, 5, 7, 0.80)),
+    url("https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1000&q=80");
+}
+
+.cards .card:nth-child(6) {
+  background-image:
+    linear-gradient(rgba(5, 5, 7, 0.58), rgba(5, 5, 7, 0.80)),
+    url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1000&q=80");
+}
+.project-one {
+  background-image: url("https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=1200&q=80");
+}
+
+.project-two {
+  background-image: url("https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=1200&q=80");
+}
+.project-one {
+  background-image: url("https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=1200&q=80");
+}
+.hero-image img {
+  content: url("https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?auto=format&fit=crop&w=1200&q=85");
+}
+.cards .card {
+  border: 1px solid rgba(201, 162, 39, 0.65);
+  box-shadow: 0 0 18px rgba(201, 162, 39, 0.08);
+}
+.cards .card:nth-child(1) {
+  background-image:
+    linear-gradient(rgba(5, 5, 7, 0.58), rgba(5, 5, 7, 0.80)),
+    url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1000&q=80");
+}
+.newsletter-section iframe {
+  border: 2px solid #d4af37 !important;
+  border-radius: 16px;
+}
+.newsletter-intro {
+  max-width: 720px;
+  margin: 0 auto 28px;
+  color: #cfcfcf;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.newsletter-mobile-title {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .newsletter-mobile-title {
+    display: block;
+    margin: 0 auto 20px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  .newsletter-section iframe {
+    height: 400px !important;
+  }
+}
+.whatsapp-float {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 9999;
+  width: 56px;
+  height: 56px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius: 50px;
+  background: #25d366;
+font-size: 28px;
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.06);
+}
+form select {
+  padding: 18px;
+  border: 1px solid #555;
+  border-radius: 10px;
+  background: #171717;
+  color: #ffffff;
+  font: inherit;
+}
+
+form select option {
+  background: #171717;
+  color: #ffffff;
 }
