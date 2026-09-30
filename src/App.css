@@ -936,3 +936,52 @@ form select option {
   background: #171717;
   color: #ffffff;
 }
+/* Corrections mobiles finales */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  h1 {
+    font-size: clamp(42px, 11vw, 64px) !important;
+    line-height: 1.08 !important;
+  }
+
+  h2 {
+    font-size: clamp(32px, 9vw, 48px) !important;
+    line-height: 1.15 !important;
+  }
+
+  p,
+  li,
+  footer {
+    color: #b8b8b8 !important;
+  }
+
+  .whatsapp-float {
+    width: 58px;
+    height: 58px;
+    right: 16px;
+    bottom: 18px;
+    font-size: 24px;
+  }
+
+  .back-to-top {
+    left: 18px;
+    right: auto;
+    bottom: 18px;
+    transform: none;
+  }
+
+  footer {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    padding-bottom: 100px !important;
+    overflow: hidden;
+  }
+
+  footer * {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+}

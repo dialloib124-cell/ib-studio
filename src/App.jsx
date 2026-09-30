@@ -290,12 +290,17 @@ function App() {
 </p>
 
 <form
-  action="https://formsubmit.co/contact.ibstudioweb@gmail.com"
+  action="https://api.web3forms.com/submit"
   method="POST"
 >
   <input
     type="hidden"
-    name="_next"
+    name="access_key"
+    value="e8037a34-2d45-4552-809a-4dfdfc63ab4e"
+  />
+  <input
+    type="hidden"
+    name="redirect"
     value="https://www.ibstudio-agency.com/merci.html"
   />
 
