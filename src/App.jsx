@@ -47,7 +47,12 @@ function App() {
               <a href="#services" className="btn">
                 Découvrir nos solutions
               </a>
-
+<a
+  href="https://ib-studio-business.dialloib124.chatgpt.site/offre"
+  className="btn"
+>
+  Découvrir l’offre à 490 €
+</a>
               <a href="#contact" className="btn btn-outline">
                 parler de mon projet
               </a>
@@ -297,7 +302,12 @@ function App() {
     type="hidden"
     name="access_key"
     value="e8037a34-2d45-4552-809a-4dfdfc63ab4e"
-  />
+  /><
+    input
+  type="hidden"
+  name="subject"
+  value="Nouvelle demande IB Studio"
+/>
   <input
     type="hidden"
     name="redirect"
