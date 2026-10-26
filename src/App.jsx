@@ -2,6 +2,14 @@ import "./App.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+const examples = [
+  { category: "Coiffure et beauté", name: "Rosa Style", detail: "Présentez vos prestations et facilitez la prise de contact.", status: "Site client", url: "https://rosastyle.fr", image: "https://rosastyle.fr/assets/rosa-logo.png", logo: true },
+  { category: "Décoration et intérieur", name: "Essentiel et M.O.Y", detail: "Mettez en valeur votre univers et vos accompagnements.", status: "Projet client · En cours de validation", url: "https://essentiel-et-moy.dialloib124.chatgpt.site", image: "https://essentiel-et-moy.dialloib124.chatgpt.site/assets/salon-hd.jpg" },
+  { category: "Artistes et musique", name: "NOVA", detail: "Réunissez votre musique, votre image et vos contacts booking.", status: "Démonstration fictive", url: "https://nova-ib-studio.dialloib124.chatgpt.site", image: "https://nova-ib-studio.dialloib124.chatgpt.site/assets/scene.webp" },
+  { category: "Boutiques et vente", name: "Maison Noryelis", detail: "Découvrez un exemple de présentation de produits et de collections.", status: "Projet conceptuel", url: "https://maison-noryelis.dialloib124.chatgpt.site", image: "https://maison-noryelis.dialloib124.chatgpt.site/maison-noryelis-hero.png" },
+  { category: "Bâtiment et artisans", name: "ChantierFacile", detail: "Explorez une application de gestion des clients, prestations et devis.", status: "Application de démonstration", url: "https://chantierfacile-ib.dialloib124.chatgpt.site", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80" },
+];
+
 function App() {
   useEffect(() => {
     AOS.init({
@@ -20,6 +28,7 @@ function App() {
         <nav>
           <a href="#accueil">Accueil</a>
 <a href="#services">Services</a>
+<a href="#realisations">Exemples</a>
 <a href="#apropos">À propos</a>
 <a href="https://chantierfacile-ib.dialloib124.chatgpt.site">ChantierFacile</a>
 <a href="#contact" className="btn">Prendre rendez-vous</a>
@@ -140,43 +149,28 @@ function App() {
             </article>
           </div>
         </section>
-        <section
-          id="realisations"
-          className="projects"
-          data-aos="fade-up"
-        >
-          <p className="subtitle">NOS RÉALISATIONS</p>
-
-          <h2>
-            Des projets simples, élégants et performants
-          </h2>
-
-          <div className="project-grid">
-            <article className="project">
-              <div className="project-image project-one">
-                <span>Projet 01</span>
-              </div>
-
-              <h3>Site premium pour artiste</h3>
-<p>Étude de style — Projet conceptuel</p>
-            </article>
-
-            <article className="project">
-              <div className="project-image project-two">
-                <span>Projet 02</span>
-              </div>
-
-              <h3>Portfolio premium pour artiste</h3>
-<p>Étude de style — Projet conceptuel</p>
-            </article>
-
-            <article className="project">
-              <div className="project-image project-three">
-                <span>Projet 03</span>
-              </div>
-
-              <h3>Maison Noryelis — Boutique de bijoux premium<a href="https://maison-noryelis.dialloib124.chatgpt.site" target="_blank" rel="noopener noreferrer" style={{ display: "block", marginTop: "12px", color: "#f5b934", fontSize: "14px", textDecoration: "none" }}>Voir le site ↗</a></h3>
-<p>Projet conceptuel — Création IB Studio</p>            </article>
+        <section id="realisations" className="projects sector-examples" aria-labelledby="examples-title">
+          <p className="subtitle">DES EXEMPLES POUR VOTRE ACTIVITÉ</p>
+          <h2 id="examples-title">Trouvez l’inspiration pour votre projet</h2>
+          <p className="examples-intro">Choisissez votre univers, explorez un exemple et parlons du site ou de l’application adapté à votre activité.</p>
+          <div className="examples-grid">
+            {examples.map((example) => (
+              <article className="example-card" key={example.name}>
+                <a href={example.url} target="_blank" rel="noopener noreferrer" className="example-preview" aria-label={`Voir l’exemple ${example.name} (nouvel onglet)`}>
+                  <img src={example.image} alt={`Aperçu de l’univers ${example.name}`} loading="lazy" className={example.logo ? "example-logo" : undefined} />
+                  <span className="example-category">{example.category}</span>
+                </a>
+                <div className="example-content">
+                  <p className="example-status">{example.status}</p>
+                  <h3>{example.name}</h3>
+                  <p className="example-detail">{example.detail}</p>
+                  <div className="example-actions">
+                    <a href={example.url} className="btn-primary" target="_blank" rel="noopener noreferrer" aria-label={`Voir l’exemple ${example.name} (nouvel onglet)`}>Voir l’exemple ↗</a>
+                    <a href={`https://wa.me/33650744061?text=${encodeURIComponent(`Bonjour IB Studio, j’ai découvert votre exemple ${example.name} (${example.url}). Je souhaite un ${example.name === "ChantierFacile" ? "outil" : "site"} comme celui-ci pour mon activité. Pouvons-nous en parler ?`)}`} className="example-contact" target="_blank" rel="noopener noreferrer">{example.name === "ChantierFacile" ? "Je veux un outil comme celui-ci" : "Je veux un site comme celui-ci"}</a>
+                  </div>
+                </div>
+              </article>
+            ))}
           </div>
         </section>
         <section
