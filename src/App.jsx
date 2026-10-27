@@ -3,7 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 const examples = [
-  { category: "Application pour artistes", name: "NOVA Studio", detail: "Créez vous-même votre page artiste avec l’assistant IA : biographie, présentation, liens et contact.", status: "Version test · Connexion ChatGPT requise", url: "https://nova-studio.dialloib124.chatgpt.site", image: "https://nova-studio.dialloib124.chatgpt.site/icons/nova-512.png", logo: true },
+  { category: "Application pour artistes", name: "NOVA Studio", detail: "Créez vous-même votre page artiste avec l’assistant IA : biographie, présentation, liens et contact.", status: "Offre payante en préparation · Accès fermé", url: "https://www.ibstudio-agency.com/#contact", image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='512' height='512' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' fill='%23101212'/%3E%3Ctext x='256' y='330' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='280' fill='%23d4b778'%3EN%3C/text%3E%3Ccircle cx='366' cy='380' r='20' fill='%23d4b778'/%3E%3C/svg%3E", logo: true },
   { category: "Coiffure et beauté", name: "Rosa Style", detail: "Présentez vos prestations et facilitez la prise de contact.", status: "Site client", url: "https://rosastyle.fr", image: "https://rosastyle.fr/assets/rosa-logo.png", logo: true },
   { category: "Décoration et intérieur", name: "Essentiel et M.O.Y", detail: "Mettez en valeur votre univers et vos accompagnements.", status: "Projet client · En cours de validation", url: "https://essentiel-et-moy.dialloib124.chatgpt.site", image: "https://essentiel-et-moy.dialloib124.chatgpt.site/assets/salon-hd.jpg" },
   { category: "Artistes et musique", name: "IB · CAP-COP-COL", detail: "Découvrez ma page artiste : mon histoire, ma méthode et mon univers rap.", status: "Page artiste · Créée avec NOVA", url: "https://ib-artiste.dialloib124.chatgpt.site", image: "https://ib-artiste.dialloib124.chatgpt.site/images/ib-portrait-noir-or.png" },
@@ -30,7 +30,7 @@ function App() {
           <a href="#accueil">Accueil</a>
 <a href="#services">Services</a>
 <a href="#realisations">Exemples</a>
-<a href="https://nova-studio.dialloib124.chatgpt.site">NOVA Studio</a>
+<a href="#realisations">NOVA Studio</a>
 <a href="#apropos">À propos</a>
 <a href="https://chantierfacile-ib.dialloib124.chatgpt.site">ChantierFacile</a>
 <a href="#contact" className="btn">Prendre rendez-vous</a>
@@ -167,7 +167,7 @@ function App() {
                   <h3>{example.name}</h3>
                   <p className="example-detail">{example.detail}</p>
                   <div className="example-actions">
-                    <a href={example.url} className="btn-primary" target="_blank" rel="noopener noreferrer" aria-label={`Voir l’exemple ${example.name} (nouvel onglet)`}>{example.name === "NOVA Studio" ? "Créer ma page avec l’IA ↗" : "Voir l’exemple ↗"}</a>
+                    <a href={example.url} className="btn-primary" target="_blank" rel="noopener noreferrer" aria-label={`Voir l’exemple ${example.name} (nouvel onglet)`}>{example.name === "NOVA Studio" ? "Demander des informations ↗" : "Voir l’exemple ↗"}</a>
                     <a href={`https://wa.me/33650744061?text=${encodeURIComponent(`Bonjour IB Studio, j’ai découvert votre exemple ${example.name} (${example.url}). Je souhaite un ${example.name === "ChantierFacile" ? "outil" : "site"} comme celui-ci pour mon activité. Pouvons-nous en parler ?`)}`} className="example-contact" target="_blank" rel="noopener noreferrer">{example.name === "ChantierFacile" ? "Je veux un outil comme celui-ci" : "Je veux un site comme celui-ci"}</a>
                   </div>
                 </div>
