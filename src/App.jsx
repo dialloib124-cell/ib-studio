@@ -30,7 +30,6 @@ function App() {
 <a href="#services">Services</a>
 <a href="#realisations">Exemples</a>
 <a href="#apropos">À propos</a>
-<a href="https://chantierfacile-ib.dialloib124.chatgpt.site">ChantierFacile</a>
 <a href="#contact" className="btn">Prendre rendez-vous</a>
         </nav>
       </header>
@@ -107,22 +106,6 @@ function App() {
 
             <article className="card">
               <span>03</span>
-              <h3>Applications web</h3>
-              <p>
-                Des applications personnalisées pour répondre aux besoins de
-                votre activité.
-              </p>
-              <a
-                href="https://chantierfacile-ib.dialloib124.chatgpt.site"
-                className="btn-primary"
-                style={{ marginTop: "20px", padding: "12px 18px" }}
-              >
-                Accéder à ChantierFacile
-              </a>
-            </article>
-
-            <article className="card">
-              <span>04</span>
               <h3>Conception UX/UI</h3>
               <p>
                 Des interfaces claires, agréables et faciles à utiliser pour
@@ -131,7 +114,7 @@ function App() {
             </article>
 
             <article className="card">
-              <span>05</span>
+              <span>04</span>
               <h3>SEO et performance</h3>
               <p>
                 Optimisation de la vitesse et du référencement de votre site
@@ -140,7 +123,7 @@ function App() {
             </article>
 
             <article className="card">
-              <span>06</span>
+              <span>05</span>
               <h3>Maintenance</h3>
               <p>
                 Mise à jour, sécurité, correction des problèmes et assistance
