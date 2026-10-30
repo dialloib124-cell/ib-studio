@@ -238,24 +238,23 @@ function App() {
       </article>
 </div>
 </section>
-        <section className="newsletter-section">
-  <p className="subtitle">ACTUALITÉS</p>
-  <h2 className="newsletter-mobile-title">
-  Recevez les actualités IB Studio
-</h2>
-  <p className="newsletter-intro">
-  Découvrez nos nouveaux projets, des conseils pour renforcer votre image et des offres réservées aux abonnés.
-</p>
-
-  <iframe
-    src="https://15nsl.mjt.lu/wgt/15nsl/0y9u/form?c=40134689"
-    title="Inscription aux actualités IB Studio"
-    width="100%"
-    height="300"
-    scrolling="no"
-    style={{ border: "0" }}
-  />
-</section>
+        <section className="newsletter-section" aria-labelledby="newsletter-title">
+          <div className="newsletter-panel">
+            <h2 id="newsletter-title">Les nouvelles d’IB Studio</h2>
+            <p className="newsletter-intro">Nouveaux projets, conseils et offres par e-mail.</p>
+            <details className="newsletter-signup">
+              <summary>S’inscrire aux actualités</summary>
+              <iframe
+                src="https://15nsl.mjt.lu/wgt/15nsl/0y9u/form?c=40134689"
+                title="Inscription aux actualités IB Studio"
+                width="100%"
+                height="480"
+                loading="lazy"
+                style={{ border: "0" }}
+              />
+            </details>
+          </div>
+        </section>
       <section
           id="contact"
           className="contact"
