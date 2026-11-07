@@ -29,6 +29,7 @@ function App() {
           <a href="#accueil">Accueil</a>
 <a href="#services">Services</a>
 <a href="#realisations">Exemples</a>
+<a href="/artistes/index.html">Artistes & Musique</a>
 <a href="#apropos">À propos</a>
 <a href="#contact" className="btn">Prendre rendez-vous</a>
         </nav>
@@ -154,6 +155,19 @@ function App() {
                 </div>
               </article>
             ))}
+          </div>
+        </section>
+        <section id="artistes-musique" className="music-discovery" aria-labelledby="music-title">
+          <div className="music-discovery-copy">
+            <p className="subtitle">IB STUDIO / ARTISTES & MUSIQUE</p>
+            <h2 id="music-title">Des voix.<br />Un mouvement.</h2>
+            <p>Découvrez les artistes réunis par IB, leurs univers et leurs morceaux. Une page pour chacun, un lieu pour les rencontrer.</p>
+            <div className="buttons"><a href="/artistes/index.html" className="btn-primary">Explorer l’univers musical ↗</a><a href="/artistes/musique.html" className="btn btn-outline">Écouter la musique</a></div>
+            <p className="music-direction">Un projet dirigé par IB · Artiste & fondateur</p>
+          </div>
+          <div className="music-discovery-artists">
+            <a href="/artistes/sacrifice-224.html"><img src="/artistes/assets/sacrifice-224.png" alt="Logo SACRIFICE 224" loading="lazy" /><strong>SACRIFICE 224</strong><span>Hip-Hop / Rap ↗</span></a>
+            <a href="/artistes/ib.html"><img src="/artistes/assets/ib-studio-logo.png" alt="Logo IB Studio doré" loading="lazy" /><strong>IB</strong><span>Artiste & Direction ↗</span></a>
           </div>
         </section>
         <section
