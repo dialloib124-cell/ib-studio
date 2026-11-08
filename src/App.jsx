@@ -5,7 +5,6 @@ import { useEffect } from "react";
 const examples = [
   { category: "Coiffure et beauté", name: "Rosa Style", detail: "Présentez vos prestations et facilitez la prise de contact.", status: "Site client", url: "https://rosastyle.fr", image: "https://rosastyle.fr/assets/rosa-logo.png", logo: true },
   { category: "Décoration et intérieur", name: "Essentiel et M.O.Y", detail: "Mettez en valeur votre univers et vos accompagnements.", status: "Site client · Livré", url: "https://essentiel-et-moy.dialloib124.chatgpt.site", image: "https://essentiel-et-moy.dialloib124.chatgpt.site/assets/salon-hd.jpg" },
-  { category: "Artistes et musique", name: "IB · CAP-COP-COL", detail: "Découvrez ma page artiste : mon histoire, ma méthode et mon univers rap.", status: "Page artiste · Créée avec NOVA", url: "https://ib-artiste.dialloib124.chatgpt.site", image: "https://ib-artiste.dialloib124.chatgpt.site/images/ib-portrait-noir-or.png" },
   { category: "Boutiques et vente", name: "Maison Noryelis", detail: "Découvrez un exemple de présentation de produits et de collections.", status: "Projet conceptuel", url: "https://maison-noryelis.dialloib124.chatgpt.site", image: "https://maison-noryelis.dialloib124.chatgpt.site/maison-noryelis-hero.png" },
   { category: "Bâtiment et artisans", name: "ChantierFacile", detail: "Explorez une application de gestion des clients, prestations et devis.", status: "Application de démonstration", url: "https://chantierfacile-ib.dialloib124.chatgpt.site", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80" },
 ];
@@ -29,7 +28,7 @@ function App() {
           <a href="#accueil">Accueil</a>
 <a href="#services">Services</a>
 <a href="#realisations">Exemples</a>
-<a href="/artistes/index.html">Artistes & Musique</a>
+<a href="#artistes-musique">Artistes & Musique</a>
 <a href="#apropos">À propos</a>
 <a href="#contact" className="btn">Prendre rendez-vous</a>
         </nav>
@@ -166,8 +165,14 @@ function App() {
             <p className="music-direction">Un projet dirigé par IB · Artiste & fondateur</p>
           </div>
           <div className="music-discovery-artists">
-            <a href="/artistes/sacrifice-224.html"><img src="/artistes/assets/sacrifice-224.png" alt="Logo SACRIFICE 224" loading="lazy" /><strong>SACRIFICE 224</strong><span>Hip-Hop / Rap ↗</span></a>
-            <a href="/artistes/ib.html"><img src="/artistes/assets/ib-studio-logo.png" alt="Logo IB Studio doré" loading="lazy" /><strong>IB</strong><span>Artiste & Direction ↗</span></a>
+            <article className="music-artist-card">
+              <a className="music-artist-main" href="/artistes/sacrifice-224.html"><img src="/artistes/assets/sacrifice-224.png" alt="Logo SACRIFICE 224" loading="lazy" /><h3>SACRIFICE 224</h3><p>Hip-Hop / Rap</p><span>Découvrir l’artiste ↗</span></a>
+              <a className="music-artist-extra" href="/artistes/sacrifice-224.html#ecouter">Écouter le morceau ↗</a>
+            </article>
+            <article className="music-artist-card">
+              <a className="music-artist-main" href="/artistes/ib.html"><img src="/artistes/assets/ib-studio-logo.png" alt="Logo IB Studio doré" loading="lazy" /><h3>IB</h3><p>Artiste & Direction</p><span>Découvrir l’artiste ↗</span></a>
+              <a className="music-artist-extra" href="https://ib-artiste.dialloib124.chatgpt.site" target="_blank" rel="noopener noreferrer">CAP-COP-COL · Mon univers ↗</a>
+            </article>
           </div>
         </section>
         <section
