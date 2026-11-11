@@ -5,7 +5,7 @@ import { useEffect } from "react";
 const examples = [
   { category: "Coiffure et beauté", name: "Rosa Style", detail: "Présentez vos prestations et facilitez la prise de contact.", status: "Site client", url: "https://rosastyle.fr", image: "https://rosastyle.fr/assets/rosa-logo.png", logo: true },
   { category: "Décoration et intérieur", name: "Essentiel et M.O.Y", detail: "Mettez en valeur votre univers et vos accompagnements.", status: "Site client · Livré", url: "https://essentiel-et-moy.dialloib124.chatgpt.site", image: "https://essentiel-et-moy.dialloib124.chatgpt.site/assets/salon-hd.jpg" },
-  { category: "Boutiques et vente", name: "Maison Noryelis", detail: "Découvrez un exemple de présentation de produits et de collections.", status: "Projet conceptuel", url: "https://maison-noryelis.dialloib124.chatgpt.site", image: "https://maison-noryelis.dialloib124.chatgpt.site/maison-noryelis-hero.png" },
+  { category: "Boutiques et vente", name: "Maison Noryelis", detail: "Découvrez un exemple de présentation de produits et de collections.", status: "Projet conceptuel", url: "https://maison.ibstudio-agency.com", image: "https://maison-noryelis.dialloib124.chatgpt.site/maison-noryelis-hero.png" },
   { category: "Bâtiment et artisans", name: "ChantierFacile", detail: "Explorez une application de gestion des clients, prestations et devis.", status: "Application de démonstration", url: "https://chantier.ibstudio-agency.com", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80" },
 ];
 
