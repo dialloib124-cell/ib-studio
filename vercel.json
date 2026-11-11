@@ -1,0 +1,24 @@
+{
+  "redirects": [
+    {
+      "source": "/artistes/sacrifice-224.html",
+      "destination": "/artistes/sacrifice-224",
+      "permanent": true
+    },
+    {
+      "source": "/artistes/ib.html",
+      "destination": "/artistes/ib",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/artistes/sacrifice-224",
+      "destination": "/artistes/sacrifice-224.html"
+    },
+    {
+      "source": "/artistes/ib",
+      "destination": "/artistes/ib.html"
+    }
+  ]
+}
