@@ -1046,3 +1046,19 @@ form select option {
   .music-artist-main p, .music-artist-main span, .music-artist-extra { font-size: 12px; line-height: 1.5; }
   .music-artist-extra { padding: 14px 12px; min-height: 64px; }
 }
+
+
+/* Navigation mobile IB Studio : surcharges ciblées */
+.mobile-menu-toggle { display: none; }
+@media (max-width: 700px) {
+  .header { position: sticky; top: 0; min-height: 72px; padding: 12px 5%; flex-direction: row; align-items: center; flex-wrap: wrap; gap: 10px; }
+  .header .logo { font-size: clamp(23px, 6vw, 32px); }
+  .mobile-menu-toggle { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 76px; padding: 8px 14px; border: 1px solid #d4af37; border-radius: 8px; color: #f5b934; background: #151515; font: inherit; font-weight: 700; cursor: pointer; }
+  .header nav, .header nav:not(.nav-open) { display: none; }
+  .header nav.nav-open { display: flex; flex-direction: column; align-items: stretch; gap: 0; flex-basis: 100%; width: 100%; padding: 8px 0 14px; }
+  .header nav a { display: block; padding: 12px 10px; min-height: 44px; font-size: 15px; }
+  .header nav .btn { text-align: center; }
+  section { scroll-margin-top: 86px; }
+}
+.mobile-menu-toggle:focus-visible, .header nav a:focus-visible { outline: 3px solid #ffd56a; outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
