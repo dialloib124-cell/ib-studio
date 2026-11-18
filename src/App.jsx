@@ -44,7 +44,7 @@ function App() {
             <p className="subtitle">STUDIO CRÉATIF DIGITAL</p>
 
             <h1>
-  Transformez votre passion en une présence digitale qui attire des clients.
+  Création de sites web professionnels pour artistes et entrepreneurs.
 </h1>
 
 <p>
@@ -53,8 +53,8 @@ function App() {
 </p>
 
             <div className="buttons">
-              <a href="#services" className="btn">
-                Découvrir nos solutions
+              <a href="#tarifs" className="btn">
+                Découvrir nos offres
               </a>
 <a
   href="https://ib-studio-business.dialloib124.chatgpt.site/offre"
@@ -62,8 +62,9 @@ function App() {
 >
   Découvrir l’offre à 490 €
 </a>
+              <a href="#realisations" className="btn btn-outline">Découvrir nos réalisations</a>
               <a href="#contact" className="btn btn-outline">
-                parler de mon projet
+                Demander un devis
               </a>
             </div>
           </div>
