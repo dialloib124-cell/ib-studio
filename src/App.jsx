@@ -163,18 +163,20 @@ function App() {
         </section>
         <section className="additional-projects" aria-labelledby="additional-projects-title">
           <p className="subtitle">AUTRES RÉALISATIONS</p>
-          <h2 id="additional-projects-title">D'autres projets accompagnés par IB Studio</h2>
-          <p className="additional-projects-intro">Ces projets sont présentés ici sans lien externe tant que leur adresse de consultation n'a pas été vérifiée.</p>
+          <h2 id="additional-projects-title">D’autres réalisations à découvrir</h2>
+          <p className="additional-projects-intro">IB Studio accompagne aussi des projets de proximité. Découvrez ces réalisations et contactez-nous pour imaginer la vôtre.</p>
           <div className="additional-projects-grid">
             <article className="additional-project-card">
               <p className="additional-project-category">Projet client</p>
               <h3>Kadija</h3>
-              <p>Projet de site réalisé. Adresse de consultation à confirmer.</p>
+              <p>Un projet de site conçu pour mettre en valeur une activité.</p>
+              <a className="additional-project-contact" href="#contact">Parler d’un projet similaire</a>
             </article>
             <article className="additional-project-card">
               <p className="additional-project-category">Projet client</p>
               <h3>Fatou Coiffure</h3>
-              <p>Projet de site réalisé. Adresse de consultation à confirmer.</p>
+              <p>Une présence en ligne dédiée à l’univers de la coiffure.</p>
+              <a className="additional-project-contact" href="#contact">Parler d’un projet similaire</a>
             </article>
           </div>
         </section>
