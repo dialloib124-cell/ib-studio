@@ -1,7 +1,7 @@
 import "./App.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 const examples = [
   { category: "Coiffure et beauté", name: "Rosa Style", detail: "Présentez vos prestations et facilitez la prise de contact.", status: "Site client", url: "https://rosastyle.fr", image: "https://rosastyle.fr/assets/rosa-logo.png", logo: true },
   { category: "Décoration et intérieur", name: "Essentiel et M.O.Y", detail: "Mettez en valeur votre univers et vos accompagnements.", status: "Site client · Livré", url: "https://essentieletmoy.com", image: "https://essentiel-et-moy.dialloib124.chatgpt.site/assets/salon-hd.jpg" },
@@ -10,6 +10,8 @@ const examples = [
 ];
 
 function App() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -24,10 +26,12 @@ function App() {
   <span>IB</span> STUDIO
 </div>
 
-        <nav>
+        <button type="button" className="mobile-menu-toggle" aria-controls="primary-navigation" aria-expanded={menuOpen} onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? "Fermer" : "Menu"}</button>
+        <nav id="primary-navigation" className={menuOpen ? "nav-open" : ""} aria-label="Navigation principale" onClick={(event) => { if (event.target.closest("a")) setMenuOpen(false); }}>
           <a href="#accueil">Accueil</a>
 <a href="#services">Services</a>
-<a href="#realisations">Exemples</a>
+<a href="#realisations">Réalisations</a>
+<a href="#tarifs">Tarifs</a>
 <a href="#artistes-musique">Artistes & Musique</a>
 <a href="#apropos">À propos</a>
 <a href="#contact" className="btn">Prendre rendez-vous</a>
