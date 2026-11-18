@@ -1,7 +1,7 @@
 import "./App.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 const examples = [
   { category: "Coiffure et beauté", name: "Rosa Style", detail: "Présentez vos prestations et facilitez la prise de contact.", status: "Site client", url: "https://rosastyle.fr", image: "https://rosastyle.fr/assets/rosa-logo.png", logo: true },
   { category: "Décoration et intérieur", name: "Essentiel et M.O.Y", detail: "Mettez en valeur votre univers et vos accompagnements.", status: "Site client · Livré", url: "https://essentieletmoy.com", image: "https://essentiel-et-moy.dialloib124.chatgpt.site/assets/salon-hd.jpg" },
@@ -10,6 +10,8 @@ const examples = [
 ];
 
 function App() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -24,10 +26,12 @@ function App() {
   <span>IB</span> STUDIO
 </div>
 
-        <nav>
+        <button type="button" className="mobile-menu-toggle" aria-controls="primary-navigation" aria-expanded={menuOpen} onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? "Fermer" : "Menu"}</button>
+        <nav id="primary-navigation" className={menuOpen ? "nav-open" : ""} aria-label="Navigation principale" onClick={(event) => { if (event.target.closest("a")) setMenuOpen(false); }}>
           <a href="#accueil">Accueil</a>
 <a href="#services">Services</a>
-<a href="#realisations">Exemples</a>
+<a href="#realisations">Réalisations</a>
+<a href="#tarifs">Tarifs</a>
 <a href="#artistes-musique">Artistes & Musique</a>
 <a href="#apropos">À propos</a>
 <a href="#contact" className="btn">Prendre rendez-vous</a>
@@ -44,7 +48,7 @@ function App() {
             <p className="subtitle">STUDIO CRÉATIF DIGITAL</p>
 
             <h1>
-  Transformez votre passion en une présence digitale qui attire des clients.
+  Création de sites web professionnels pour artistes et entrepreneurs.
 </h1>
 
 <p>
@@ -53,8 +57,8 @@ function App() {
 </p>
 
             <div className="buttons">
-              <a href="#services" className="btn">
-                Découvrir nos solutions
+              <a href="#tarifs" className="btn">
+                Découvrir nos offres
               </a>
 <a
   href="https://ib-studio-business.dialloib124.chatgpt.site/offre"
@@ -62,8 +66,9 @@ function App() {
 >
   Découvrir l’offre à 490 €
 </a>
+              <a href="#realisations" className="btn btn-outline">Découvrir nos réalisations</a>
               <a href="#contact" className="btn btn-outline">
-                parler de mon projet
+                Demander un devis
               </a>
             </div>
           </div>
@@ -154,6 +159,25 @@ function App() {
                 </div>
               </article>
             ))}
+          </div>
+        </section>
+        <section className="additional-projects" aria-labelledby="additional-projects-title">
+          <p className="subtitle">AUTRES RÉALISATIONS</p>
+          <h2 id="additional-projects-title">D’autres réalisations à découvrir</h2>
+          <p className="additional-projects-intro">IB Studio accompagne aussi des projets de proximité. Découvrez ces réalisations et contactez-nous pour imaginer la vôtre.</p>
+          <div className="additional-projects-grid">
+            <article className="additional-project-card">
+              <p className="additional-project-category">Projet client</p>
+              <h3>Kadija</h3>
+              <p>Un projet de site conçu pour mettre en valeur une activité.</p>
+              <a className="additional-project-contact" href="#contact">Parler d’un projet similaire</a>
+            </article>
+            <article className="additional-project-card">
+              <p className="additional-project-category">Projet client</p>
+              <h3>Fatou Coiffure</h3>
+              <p>Une présence en ligne dédiée à l’univers de la coiffure.</p>
+              <a className="additional-project-contact" href="#contact">Parler d’un projet similaire</a>
+            </article>
           </div>
         </section>
         <section id="artistes-musique" className="music-discovery" aria-labelledby="music-title">

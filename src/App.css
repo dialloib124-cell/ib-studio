@@ -1046,3 +1046,91 @@ form select option {
   .music-artist-main p, .music-artist-main span, .music-artist-extra { font-size: 12px; line-height: 1.5; }
   .music-artist-extra { padding: 14px 12px; min-height: 64px; }
 }
+
+
+/* Navigation mobile IB Studio : surcharges ciblées */
+.mobile-menu-toggle { display: none; }
+@media (max-width: 700px) {
+  .header { position: sticky; top: 0; min-height: 72px; padding: 12px 5%; flex-direction: row; align-items: center; flex-wrap: wrap; gap: 10px; }
+  .header .logo { font-size: clamp(23px, 6vw, 32px); }
+  .mobile-menu-toggle { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 76px; padding: 8px 14px; border: 1px solid #d4af37; border-radius: 8px; color: #f5b934; background: #151515; font: inherit; font-weight: 700; cursor: pointer; }
+  .header nav, .header nav:not(.nav-open) { display: none; }
+  .header nav.nav-open { display: flex; flex-direction: column; align-items: stretch; gap: 0; flex-basis: 100%; width: 100%; padding: 8px 0 14px; }
+  .header nav a { display: block; padding: 12px 10px; min-height: 44px; font-size: 15px; }
+  .header nav .btn { text-align: center; }
+  section { scroll-margin-top: 86px; }
+}
+.mobile-menu-toggle:focus-visible, .header nav a:focus-visible { outline: 3px solid #ffd56a; outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+
+/* Réalisations complémentaires : sans liens non vérifiés */
+.additional-projects { border-top: 1px solid rgba(255,255,255,.08); background: #0c0c0c; }
+.additional-projects h2 { max-width: 760px; margin-bottom: 16px; font-size: clamp(28px, 3.5vw, 44px); }
+.additional-projects-intro { max-width: 720px; color: #cfcfcf; margin-bottom: 28px; }
+.additional-projects-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; max-width: 920px; }
+.additional-project-card { border: 1px solid rgba(245,185,52,.35); border-radius: 16px; padding: 28px; background: #151515; }
+.additional-project-category { color: #f5b934; font-size: 13px; font-weight: 700; margin-bottom: 12px; }
+.additional-project-card h3 { color: #fff; font-size: 25px; margin-bottom: 12px; }
+.additional-project-card p:last-child { color: #cfcfcf; }
+@media (max-width: 700px) { .additional-projects-grid { grid-template-columns: 1fr; } .additional-project-card { padding: 20px; } }
+
+.additional-project-contact { display: inline-block; margin-top: 18px; padding: 10px 0; color: #ffd56a; text-decoration: underline; text-underline-offset: 4px; font-weight: 700; }
+.additional-project-contact:focus-visible { outline: 3px solid #ffd56a; outline-offset: 4px; }
+
+
+/* Lisibilite et confort sur telephone : correctifs du 18 novembre 2026.
+   Surcharges limitees au mobile, sans changer les contenus ni les tarifs. */
+@media (max-width: 700px) {
+  .hero h1 { font-size: clamp(32px, 8vw, 44px); line-height: 1.13; overflow-wrap: break-word; }
+  .services h2, .about h2, .pricing h2, .music-discovery h2,
+  .sector-examples h2, .contact h2, .newsletter-section h2 {
+    font-size: clamp(27px, 7vw, 36px);
+    line-height: 1.2;
+    overflow-wrap: break-word;
+  }
+  .hero-text > p:not(.subtitle), .about p:not(.subtitle),
+  .music-discovery-copy > p:not(.subtitle), .example-detail,
+  .pricing-card ul li, .pricing-card .price,
+  .contact-text p, .services p, .service-card p {
+    color: #dedede;
+  }
+  .subtitle { color: #d9b75e; }
+  .hero-text > p:not(.subtitle), .about p:not(.subtitle) {
+    font-size: clamp(16px, 4.2vw, 19px);
+    line-height: 1.65;
+  }
+  .pricing-card .price { font-size: clamp(24px, 6vw, 32px); }
+  .whatsapp-float {
+    width: 48px;
+    height: 48px;
+    right: 12px;
+    bottom: 76px;
+    font-size: 22px;
+  }
+  .header { justify-content: space-between; }
+  .header nav.nav-open { max-height: calc(100dvh - 90px); overflow-y: auto; }
+}
+
+/* Ajustements mobiles validés : contraste et bouton de contact discret. */
+@media (max-width: 700px) {
+  /* Le texte gris doit rester lisible même avec la luminosité du téléphone réduite. */
+  .services p, .sector-examples p, .example-detail,
+  .example-content p, .additional-projects p,
+  .about p, .contact p, .music-discovery p,
+  .newsletter-section p {
+    color: #e0e0e0 !important;
+  }
+  .example-content .example-status, .additional-project-category,
+  .subtitle { color: #e5bc66 !important; }
+
+  /* Garder le contact accessible sans recouvrir les cartes ni les boutons. */
+  .whatsapp-float {
+    width: 44px;
+    height: 44px;
+    right: 10px;
+    bottom: 84px;
+    font-size: 20px;
+    box-shadow: 0 3px 10px rgba(37, 211, 102, .18);
+  }
+}
