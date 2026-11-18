@@ -1062,3 +1062,15 @@ form select option {
 }
 .mobile-menu-toggle:focus-visible, .header nav a:focus-visible { outline: 3px solid #ffd56a; outline-offset: 3px; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+
+/* Réalisations complémentaires : sans liens non vérifiés */
+.additional-projects { border-top: 1px solid rgba(255,255,255,.08); background: #0c0c0c; }
+.additional-projects h2 { max-width: 760px; margin-bottom: 16px; font-size: clamp(28px, 3.5vw, 44px); }
+.additional-projects-intro { max-width: 720px; color: #cfcfcf; margin-bottom: 28px; }
+.additional-projects-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; max-width: 920px; }
+.additional-project-card { border: 1px solid rgba(245,185,52,.35); border-radius: 16px; padding: 28px; background: #151515; }
+.additional-project-category { color: #f5b934; font-size: 13px; font-weight: 700; margin-bottom: 12px; }
+.additional-project-card h3 { color: #fff; font-size: 25px; margin-bottom: 12px; }
+.additional-project-card p:last-child { color: #cfcfcf; }
+@media (max-width: 700px) { .additional-projects-grid { grid-template-columns: 1fr; } .additional-project-card { padding: 20px; } }
