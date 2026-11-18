@@ -161,6 +161,23 @@ function App() {
             ))}
           </div>
         </section>
+        <section className="additional-projects" aria-labelledby="additional-projects-title">
+          <p className="subtitle">AUTRES RÉALISATIONS</p>
+          <h2 id="additional-projects-title">D'autres projets accompagnés par IB Studio</h2>
+          <p className="additional-projects-intro">Ces projets sont présentés ici sans lien externe tant que leur adresse de consultation n'a pas été vérifiée.</p>
+          <div className="additional-projects-grid">
+            <article className="additional-project-card">
+              <p className="additional-project-category">Projet client</p>
+              <h3>Kadija</h3>
+              <p>Projet de site réalisé. Adresse de consultation à confirmer.</p>
+            </article>
+            <article className="additional-project-card">
+              <p className="additional-project-category">Projet client</p>
+              <h3>Fatou Coiffure</h3>
+              <p>Projet de site réalisé. Adresse de consultation à confirmer.</p>
+            </article>
+          </div>
+        </section>
         <section id="artistes-musique" className="music-discovery" aria-labelledby="music-title">
           <div className="music-discovery-copy">
             <p className="subtitle">IB STUDIO / ARTISTES & MUSIQUE</p>
