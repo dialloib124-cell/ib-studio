@@ -1077,3 +1077,37 @@ form select option {
 
 .additional-project-contact { display: inline-block; margin-top: 18px; padding: 10px 0; color: #ffd56a; text-decoration: underline; text-underline-offset: 4px; font-weight: 700; }
 .additional-project-contact:focus-visible { outline: 3px solid #ffd56a; outline-offset: 4px; }
+
+
+/* Lisibilite et confort sur telephone : correctifs du 18 novembre 2026.
+   Surcharges limitees au mobile, sans changer les contenus ni les tarifs. */
+@media (max-width: 700px) {
+  .hero h1 { font-size: clamp(32px, 8vw, 44px); line-height: 1.13; overflow-wrap: break-word; }
+  .services h2, .about h2, .pricing h2, .music-discovery h2,
+  .sector-examples h2, .contact h2, .newsletter-section h2 {
+    font-size: clamp(27px, 7vw, 36px);
+    line-height: 1.2;
+    overflow-wrap: break-word;
+  }
+  .hero-text > p:not(.subtitle), .about p:not(.subtitle),
+  .music-discovery-copy > p:not(.subtitle), .example-detail,
+  .pricing-card ul li, .pricing-card .price,
+  .contact-text p, .services p, .service-card p {
+    color: #dedede;
+  }
+  .subtitle { color: #d9b75e; }
+  .hero-text > p:not(.subtitle), .about p:not(.subtitle) {
+    font-size: clamp(16px, 4.2vw, 19px);
+    line-height: 1.65;
+  }
+  .pricing-card .price { font-size: clamp(24px, 6vw, 32px); }
+  .whatsapp-float {
+    width: 48px;
+    height: 48px;
+    right: 12px;
+    bottom: 76px;
+    font-size: 22px;
+  }
+  .header { justify-content: space-between; }
+  .header nav.nav-open { max-height: calc(100dvh - 90px); overflow-y: auto; }
+}
