@@ -1074,3 +1074,6 @@ form select option {
 .additional-project-card h3 { color: #fff; font-size: 25px; margin-bottom: 12px; }
 .additional-project-card p:last-child { color: #cfcfcf; }
 @media (max-width: 700px) { .additional-projects-grid { grid-template-columns: 1fr; } .additional-project-card { padding: 20px; } }
+
+.additional-project-contact { display: inline-block; margin-top: 18px; padding: 10px 0; color: #ffd56a; text-decoration: underline; text-underline-offset: 4px; font-weight: 700; }
+.additional-project-contact:focus-visible { outline: 3px solid #ffd56a; outline-offset: 4px; }
