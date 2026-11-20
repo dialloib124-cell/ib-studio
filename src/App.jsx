@@ -12,7 +12,7 @@ const examples = [
 function App() {
   useEffect(() => {
     AOS.init({
-      duration: 1000,
+      duration: 600,
       once: true,
     });
   }, []);
@@ -28,7 +28,7 @@ function App() {
           <a href="#accueil">Accueil</a>
 <a href="#services">Services</a>
 <a href="#realisations">Exemples</a>
-<a href="#artistes-musique">Artistes & Musique</a>
+<a href="#tarifs">Tarifs</a>
 <a href="#apropos">À propos</a>
 <a href="#contact" className="btn">Prendre rendez-vous</a>
         </nav>
@@ -44,26 +44,20 @@ function App() {
             <p className="subtitle">STUDIO CRÉATIF DIGITAL</p>
 
             <h1>
-  Transformez votre passion en une présence digitale qui attire des clients.
+  Un site professionnel pour transformer votre activité en une marque crédible.
 </h1>
 
 <p>
-  IB Studio crée des sites web premium pour les artistes, les labels, les DJ
-  et les créateurs qui veulent développer leur activité et renforcer leur image.
+  IB Studio crée des sites modernes pour les artistes, entrepreneurs et commerces
+  qui souhaitent attirer davantage de clients et renforcer leur image.
 </p>
 
             <div className="buttons">
-              <a href="#services" className="btn">
-                Découvrir nos solutions
+              <a href="https://business.ibstudio-agency.com/offre" className="btn-primary">
+                Découvrir l’offre à 490 €
               </a>
-<a
-  href="https://ib-studio-business.dialloib124.chatgpt.site/offre"
-  className="btn"
->
-  Découvrir l’offre à 490 €
-</a>
               <a href="#contact" className="btn btn-outline">
-                parler de mon projet
+                Parler de mon projet
               </a>
             </div>
           </div>
@@ -220,14 +214,14 @@ function App() {
         <li>Liens réseaux sociaux</li>
         <li>Livraison 24-48 heures</li>
       </ul>
-      <a href="https://buy.stripe.com/bJeaF0c6ebDadcSe3NdQQ00" className="btn">
-        Payer l’offre Starter — 250 €
+      <a href="#contact" className="btn">
+        Présenter mon projet
       </a>
     </article>
     <article className="pricing-card pricing-featured">
       <span className="badge">Populaire</span>
       <h3>PRO</h3>
-      <p className="price">À partir de 500€</p>
+      <p className="price">490 €</p>
       <ul>
         <li>Site multi-sections</li>
         <li>Design personnalisé</li>
@@ -235,8 +229,8 @@ function App() {
         <li>Formulaire + réseaux sociaux</li>
         <li>Livraison 48 heures à 1 semaine</li>
       </ul>
-      <a href="https://buy.stripe.com/6oU3cyb2a36Egp4bVFdQQ01" className="btn">
-        Payer l’offre Pro — 500 €
+      <a href="#contact" className="btn">
+        Présenter mon projet
       </a>
     </article>
 
@@ -251,8 +245,8 @@ function App() {
         <li>1 mois de support inclus</li>
         <li>Livraison 1-2 semaines</li>
       </ul>
-      <a href="https://buy.stripe.com/00w4gC1rA0Ywfl01h1dQQ02" className="btn">
-        Payer l’offre Premium — 900 €
+      <a href="#contact" className="btn">
+        Présenter mon projet
       </a>
       </article>
 </div>
@@ -290,11 +284,8 @@ function App() {
             </p>
           </div>
 
-         <p className="contact-email">
-  E-mail :{" "}
-<a href="mailto:contact.ibstudioweb@gmail.com">
-  contact.ibstudioweb@gmail.com
-</a>
+         <p className="contact-reassurance">
+  Réponse sous 24 à 48 heures — sans engagement.
 </p>
 
 <form
@@ -317,13 +308,17 @@ function App() {
     value="https://www.ibstudio-agency.com/merci.html"
   />
 
+  <label htmlFor="nom">Nom complet</label>
   <input
+    id="nom"
     type="text"
     name="nom"
     placeholder="Votre nom complet"
+    autoComplete="name"
     required
   />
-<select name="metier" required>
+<label htmlFor="metier">Votre activité</label>
+<select id="metier" name="metier" required>
   <option value="">Choisissez votre métier</option>
   <option value="Artiste">Artiste</option>
   <option value="Rappeur">Rappeur</option>
@@ -332,16 +327,21 @@ function App() {
   <option value="Label">Label</option>
   <option value="Autre">Autre</option>
 </select>
+  <label htmlFor="email">Adresse e-mail</label>
   <input
+    id="email"
     type="email"
     name="email"
     placeholder="Votre adresse e-mail"
+    autoComplete="email"
     required
   />
 
+            <label htmlFor="message">Décrivez votre projet</label>
             <textarea
-            name="message"
-              placeholder="Décrivez votre projet"
+              id="message"
+              name="message"
+              placeholder="Votre besoin, votre activité et votre objectif"
               rows="7"
               required
             />
